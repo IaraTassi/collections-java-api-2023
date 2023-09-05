@@ -52,19 +52,20 @@ public class CatalogoLivros {
         CatalogoLivros catalogoLivros = new CatalogoLivros();
 
         // Adicionando itens ao catalogo de livros
-        catalogoLivros.adicionarLivro("Livro 1", "Autor 1", 2020);
-        catalogoLivros.adicionarLivro("Livro 1", "Autor 2", 2021);
-        catalogoLivros.adicionarLivro("Livro 2", "Autor 2", 2022);
-        catalogoLivros.adicionarLivro("Livro 3", "Autor 3", 2023);
-        catalogoLivros.adicionarLivro("Livro 4", "Autor 5", 1994);
+        catalogoLivros.adicionarLivro("Orgulho e Preconceito", "Jane Austen", 1813);
+        catalogoLivros.adicionarLivro("O Cavaleiro de Bronze", "Paulinna Simons", 1833);
+        catalogoLivros.adicionarLivro("Tatiana & Alexander", "Paulinna Simons", 2016);
+        catalogoLivros.adicionarLivro("A menina que roubava livros", "Markus Zuzak", 2005);
+        catalogoLivros.adicionarLivro("Entre duas alma", "M. Delly", 1932);
+        catalogoLivros.adicionarLivro("A Cabana", "Willian P. Young", 2007);
 
         // Exibindo livros do mesmo autor
-        System.out.println("Lista de livros por mesmo autor: " + catalogoLivros.pesquisarPorAutor("Autor 2"));
+        System.out.println("Lista de livros por mesmo autor: " + catalogoLivros.pesquisarPorAutor("Paulinna Simons"));
 
         //Exibindo livros pelo intervalo de anos
-        System.out.println("Lista de livros por interlalo do ano 2020 e 2021: " + catalogoLivros.pesquisarPorIntervaloAnos(2020, 2021));
+        System.out.println("Lista de livros por interlalo do ano 1813 e 1932: " + catalogoLivros.pesquisarPorIntervaloAnos(1813, 1932));
 
         //Exibindo livros por titulo
-        System.out.println("Lista de livros por título: " + catalogoLivros.pesquisarPorTitulo("Livro 1"));
+        System.out.println("Lista de livros por título: " + catalogoLivros.pesquisarPorTitulo("A Cabana"));
     }
 }

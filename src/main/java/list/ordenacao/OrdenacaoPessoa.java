@@ -2,6 +2,7 @@ package main.java.list.ordenacao;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrdenacaoPessoa {
@@ -29,10 +30,11 @@ public class OrdenacaoPessoa {
         OrdenacaoPessoa ordenacaoPessoa = new OrdenacaoPessoa();
 
         //Adicionando pessoas na lista
-        ordenacaoPessoa.adicionarPessoa("Nome 1", 20, 1.56);
-        ordenacaoPessoa.adicionarPessoa("Nome 2", 30, 1.80);
-        ordenacaoPessoa.adicionarPessoa("Nome 3", 25, 1.70);
-        ordenacaoPessoa.adicionarPessoa("Nome 4", 17, 1.56);
+        ordenacaoPessoa.adicionarPessoa("George Jetson", 40, 1.75);
+        ordenacaoPessoa.adicionarPessoa("Jane Jetson", 33, 1.71);
+        ordenacaoPessoa.adicionarPessoa("Judy Jetson", 15, 1.70);
+        ordenacaoPessoa.adicionarPessoa("Elroy Jetson", 11, 1.56);
+
         //Lista inicial asicionada
         System.out.println("lista inicial: " + ordenacaoPessoa.pessoaList);
 
@@ -45,4 +47,10 @@ public class OrdenacaoPessoa {
 
     }
 
+    static class ComparatorPorAltura implements Comparator<Pessoa> {
+        @Override
+        public int compare(Pessoa p1, Pessoa p2) {
+            return Double.compare(p1.getAltura(), p2.getAltura());
+        }
+    }
 }
